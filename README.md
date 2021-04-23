@@ -18,9 +18,14 @@ Works in PHP7 only.
   - (ab)use type juggling to cast a string to an int
 - Using a combination of the above tricks, you can get all of the digits 0-9
 - Can construct any number by concatenating digits and then casting to an int
-- Constructing arbitrary strings requires a bit more work... 
-  - the only primitive we have for obtaining strings is concat, which gives us a length-2 string
-  - we can generate `/[a-z]{2,}/i` , but getting single-character strings is not possible
+- Constructing arbitrary strings requires a bit more work...
+  - `(99999999999...)` -> `INF`
+    - 309 9s gives us `INF`
+  - `(INF).(9)` -> `'INF9'`
+    - Can now obtain char values in `/[a-zA-Z]/` range!
+    - e.g. `'INF9'^'00'^'33'^'99'` -> `'st'`
+  - the only primitive we have for initially obtaining strings is concat, which gives us a length-2 string
+  - we can generate `/[a-z]{2,}|[A-Z]{2,}/` , but getting single-character strings is not possible
 - `'funcname'(param)`
   - call functions by simply calling their string name
 - `strtok(0)` -> `false`
