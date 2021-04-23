@@ -17,7 +17,8 @@ Works in PHP7 only.
 - `'80'^0` -> `80`
   - (ab)use type juggling to cast a string to an int
 - Using a combination of the above tricks, you can get all of the digits 0-9
-- Can construct any number by concatenating digits and then casting to an int
+- Can construct any string `/[0-9]+/` by concatenating digits
+- Can obtain any number by casting to int 
 - Constructing arbitrary strings requires a bit more work...
   - `(99999999999...)` -> `INF`
     - 309 9s gives us `INF`
@@ -35,10 +36,10 @@ Works in PHP7 only.
   - concat number with `false` to get a length-1 string
 - `'str'^'99'^'9'`
   - extract first char of any string with xor
-- Can now build arbitrary strings `/[a-z]*/i`
+- Can now build arbitrary strings `/[a-zA-Z]/`
 - `'chr'(num)`
   - generate other characters (e.g. spaces)
-- Can now build any string at all
+- Can now build any string at all! `/.*/`
 - `str_getcsv("a,b")` -> `["a", "b"]`
   - create arrays by parsing a CSV
 - `func(...["a", "b"])`
