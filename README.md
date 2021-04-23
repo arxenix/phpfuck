@@ -35,7 +35,7 @@ Works in PHP7 only (at the moment)
   - `=== ('st'+'rt'+'OK')(0)`
 - `(9).false` -> `'9'`
   - concat number with `false` to get a length-1 string
-- `'rw'^'99'^'9'` -> `r`
+- `'rw'^'99'^'9'` -> `'r'`
   - extract first char of any string with xor
 - Can now build arbitrary strings `/[a-zA-Z]/`
 - `'CHr'(num)`
