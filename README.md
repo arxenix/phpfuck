@@ -29,6 +29,7 @@ Works in PHP7 only.
   - we can generate `/[a-z]{2,}|[A-Z]{2,}/` , but getting single-character strings is not possible
 - `'funcname'(param)`
   - call functions by simply calling their string name
+  - function names are case-insensitive
 - `strtok(0)` -> `false`
   - call strtok on a number to get `false`
   - `=== ('st'+'rt'+'OK')(0)`
@@ -41,7 +42,7 @@ Works in PHP7 only.
   - generate other characters (e.g. spaces)
 - Can now build any string at all! `/.*/`
 - `str_getcsv("a,b")` -> `["a", "b"]`
-  - create arrays by parsing a CSV
+  - create string arrays by parsing a CSV
 - `func(...["a", "b"])`
   - use spread operator to pass multiple arguments to a function
 - `create_function("", "PAYLOAD")()`
