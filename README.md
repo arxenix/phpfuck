@@ -35,10 +35,10 @@ Works in PHP7 only (at the moment)
   - `=== ('st'+'rt'+'OK')(0)`
 - `(9).false` -> `'9'`
   - concat number with `false` to get a length-1 string
-- `'str'^'99'^'9'`
+- `'rw'^'99'^'9'` -> `r`
   - extract first char of any string with xor
 - Can now build arbitrary strings `/[a-zA-Z]/`
-- `'chr'(num)`
+- `'CHr'(num)`
   - generate other characters (e.g. spaces)
 - Can now build any string at all! `/.*/`
 - `str_getcsv("a,b")` -> `["a", "b"]`
