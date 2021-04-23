@@ -5,7 +5,7 @@ Using only 5 different characters to write and execute arbitrary PHP.
 (9^.)
 ```
 
-Works in PHP7 only.
+Works in PHP7 only (at the moment)
 
 # How it works
 - `9^99` -> `106`
@@ -48,6 +48,13 @@ Works in PHP7 only.
 - `create_function("", "PAYLOAD")()`
   - use `create_function` to create a function w/ arbitrary PHP code and then call it
 - Final payload looks like: `'create_function'(...str_getcsv(',"$PAYLOAD"'))`
+
+# Previous Work
+[PHPFuck](https://github.com/splitline/PHPFuck) by splitline - using 7 different characters `([+.^])`
+
+We improve upon this by
+- using xor and concat to obtain more numbers from a starting value (no plus required)
+- using numbers instead of `[]` lets us remove a bracket
 
 # Todo
 - compatibility with other PHP versions
