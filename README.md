@@ -23,10 +23,9 @@ Works in PHP7 only.
   - we can generate `/[a-z]{2,}/i` , but getting single-character strings is not possible
 - `'funcname'(param)`
   - call functions by simply calling their string name
-  - wtf?
 - `strtok(0)` -> `false`
   - call strtok on a number to get `false`
-  - `=== ('st'+'rt'+'OK')(0)
+  - `=== ('st'+'rt'+'OK')(0)`
 - `(9).false` -> `'9'`
   - concat number with `false` to get a length-1 string
 - `'str'^'99'^'9'`
