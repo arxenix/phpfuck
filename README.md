@@ -2,7 +2,7 @@
 Using only 5 different characters to write and execute arbitrary PHP.
 
 ```
-(9^.)
+(^.9)
 ```
 
 Works in PHP7 only (at the moment)
